@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="numberDisplay"></div>
+    <div id="instructions">Presiona la barra espaciadora o usa el botón para iniciar/parar el juego</div>
+    <input type="text" id="winnerInput" placeholder="Introduce los números del cartón ganador separados por comas">
+    <button id="checkWinnerButton" onclick="checkWinner()">Comprobar cartón</button>
+    <button id="resetButton" onclick="resetGame()">Reiniciar Juego</button>
+    <button id="spaceButton" onclick="toggleGame()">Empezar/Parar Juego</button>
+    <div id="generatedNumbersList">
+        <strong>Números Generados:</strong>
+        <span id="numbersList"></span>
+    </div>
+    <i id="settingsIcon" class="fas fa-cog"></i>
+    
+    <div id="settingsModal">
+        <span id="settingsModalClose">&times;</span>
+        <h2>Ajustes</h2>
+        <label for="speed">Velocidad (ms):</label>
+        <input type="number" id="speed" value="3000">
+        <label for="backgroundColor">Color de fondo:</label>
+        <input type="color" id="backgroundColor" value="#4ca1af">
+        <label for="textColor">Color de texto:</label>
+        <input type="color" id="textColor" value="#ffffff">
+        <label for="buttonColor">Color de botones:</label>
+        <input type="color" id="buttonColor" value="#3498db">
+        <label for="fontFamily">Fuente de texto:</label>
+        <select id="fontFamily">
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+        </select>
+        <label for="voiceLanguage">Idioma de voz:</label>
+        <select id="voiceLanguage">
+            <option value="es-ES">Español</option>
+            <option value="en-US">Inglés (EEUU)</option>
+            <option value="en-GB">Inglés (Reino Unido)</option>
+            <option value="fr-FR">Francés</option>
+            <option value="de-DE">Alemán</option>
+            
+        </select>
+        <button onclick="applySettings()">Aplicar</button>
+    </div>
+
+    <script src="/script.js"></script>
+                </body>
+                </html>
+
